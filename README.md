@@ -25,4 +25,4 @@
   * explicit=True-----可选范围：True或False
     * 用于设定是否需要生成对比csv文件
 
-It offers a method jsontest.check,you can use it according to what descripted in Chinese above,or just guess and try,it is so easy!
+It offers a method jsontest.check,you can use it according to what above descripted in Chinese,or just guess and try,it is so easy!

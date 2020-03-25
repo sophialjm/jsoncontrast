@@ -1,6 +1,6 @@
 # jsontest
 ## Used to contrast two json,especially for testers.
-#### 一个方法json.check(src_data, dst_data,model='contains',string_model='strict',num_model='equal',num_limit=None,explicit=True)
+#### json.check(src_data, dst_data,model='contains',string_model='strict',num_model='equal',num_limit=None,explicit=True)
 #### 主要用来对比json串的期望值和返回值，用于接口测试，方法包括以下7个入参：
 * 2个必选参数：
   * src_data-----用来做对比的一个json串，一般地，例如：接口实际返回的json

@@ -1,7 +1,7 @@
 # jsontest
 ## Used to contrast two json,especially for testers.
-#### json.check(src_data, dst_data,model='contains',string_model='strict',num_model='equal',num_limit=None,explicit=True)
-#### 主要用来对比json串的期望值和返回值，用于接口测试，方法包括以下7个入参：
+#### json.check(src_data, dst_data,model='contains',string_model='strict',num_model='equal',num_limit=None,explicit=True,basedir=None)
+#### 主要用来对比json串的期望值和返回值，用于接口测试，方法包括以下8个入参：
 * 2个必选参数：
   * src_data-----用来做对比的一个json串，一般地，例如：接口实际返回的json
   * dst_data-----用来做对比的另一个json串，一般地，例如：校验接口的期望返回json
@@ -21,8 +21,9 @@
     * big: dst_data中的数字项大于src_data中对应的数字项
     * small: dst_data中的数字项小于src_data中对应的数字项  
   * num_limit=None-----可选范围：无或任意整数或浮点数
-    * 该项仅在num_model等于big或small时起效，用于额外的设定dst_data中的数字项的上限或下限
+    * 仅在num_model等于big或small时起效，用于额外的设定dst_data中的数字项的上限或下限
   * explicit=True-----可选范围：True或False
-    * 用于设定是否需要生成对比csv文件
-
+    * 用于设定是否需要生成json对比文件
+  * basedir=None-----可选：用于设定结果存放目录，默认存放于项目文件夹
+    * 仅在explicit=True时起效
 It offers a method jsontest.check,you can use it according to what above descripted in Chinese,or just guess and try,it is so easy!

@@ -17,7 +17,7 @@
     * exist: 只想判断dst_data中某项存在，不需要比较具体值，对应值的位置写成'<EE>'
   * num_model='equal'-----可选范围['equal','nequal','big','small']
     * equal: dst_data中的数字项等于src_data中对应的数字项
-    * strict: dst_data中的数字项不等于src_data中对应的数字项
+    * nequal: dst_data中的数字项不等于src_data中对应的数字项
     * big: dst_data中的数字项大于src_data中对应的数字项
     * small: dst_data中的数字项小于src_data中对应的数字项  
   * num_limit=None-----可选范围：无或任意整数或浮点数

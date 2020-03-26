@@ -32,4 +32,4 @@
  `jsoncontrast.check(src,dst,num_model='small',num_limit=4)`  
  
 
-## It offers a method jsontester.check,you can use it according to what above descripted in Chinese,or just guess and try,it is so easy!
+## It offers a method jsoncontrast.check,you can use it according to what above descripted in Chinese,or just guess and try,it is so easy!

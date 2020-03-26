@@ -1,4 +1,4 @@
-# pip install jsoncontrast
+# pip install jsoncontrast 出于尝试的心态~
 ## Used to contrast two json,especially for testers.
 `jsoncontrast.check(src_data, dst_data,model='contains',string_model='strict',num_model='equal',num_limit=None,explicit=True,basedir=None)`
 #### 主要用来对比json串的期望值和返回值，用于接口测试，方法包括以下8个入参：

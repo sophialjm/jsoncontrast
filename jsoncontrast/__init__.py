@@ -26,8 +26,14 @@ def check(src_data, dst_data,model='contains',string_model='strict',num_model='e
         r2=compare_dict(dst_data,src_data,string_model,num_model,num_limit)
     else:
         print("请检查参数,model取值范围：'contains'或'strict'")
+    if r1 and r2:
+        print("比对通过")
     if explicit and ((not r1) or (not r2)):
-        gen_csv(src_data,dst_data,basedir)
+        csvpath=gen_csv(src_data,dst_data,basedir)
+        print("比对失败，结果已生成至{}目录".format(csvpath))
+    elif explicit==False:
+        print("比对失败，未设置结果生成")
+
 
 
 

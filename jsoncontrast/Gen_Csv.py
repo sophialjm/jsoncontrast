@@ -31,3 +31,4 @@ def gen_csv(src_data,dst_data,basedir=None):
         writer=csv.DictWriter(f,headers)
         writer.writeheader()
         writer.writerows(dictdatas)
+    return csvpath

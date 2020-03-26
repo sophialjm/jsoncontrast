@@ -5,7 +5,7 @@
 * 2个必选参数：
   * src_data-----用来做对比的一个json串，一般地，例如：接口实际返回的json
   * dst_data-----用来做对比的另一个json串，一般地，例如：校验接口的期望返回json
-* 5个可选参数：
+* 6个可选参数：
   * model='contains'-----可选范围['contains','strict']
     * contains: src_data包含dst_data
     * strict: src_data与dst_data不计顺序内容一致
@@ -29,7 +29,7 @@
  举例，eg.  
  `src={"k1" :{"k11":[{"listk111": "北京"},{"listk112": "上海"}],"k12":{"listk121": 7}},"k2":{"listk21": "广州"} }`  
  `dst={"k1":{"k12":{"listk121": 5}}}`  
- `jsoncontrast.check(dd,d,num_model='small',num_limit=4)`  
+ `jsoncontrast.check(src,dst,num_model='small',num_limit=4)`  
  
 
 ## It offers a method jsontester.check,you can use it according to what above descripted in Chinese,or just guess and try,it is so easy!

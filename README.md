@@ -25,5 +25,11 @@
   * explicit=True-----可选范围：True或False
     * 用于设定是否需要生成json对比文件
   * basedir=None-----可选：用于设定结果存放目录，默认存放于项目文件夹
-    * 仅在explicit=True时起效
+    * 仅在explicit=True时起效  
+ 举例，eg.  
+ `src={"k1" :{"k11":[{"listk111": "北京"},{"listk112": "上海"}],"k12":{"listk121": 7}},"k2":{"listk21": "广州"} }`  
+ `dst={"k1":{"k12":{"listk121": 5}}}`  
+ `jsoncontrast.check(dd,d,num_model='small',num_limit=4)`  
+ 
+
 ## It offers a method jsontester.check,you can use it according to what above descripted in Chinese,or just guess and try,it is so easy!

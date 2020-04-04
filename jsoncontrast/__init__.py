@@ -7,13 +7,13 @@ def check(src_data, dst_data,model='contains',string_model='strict',num_model='e
     if model not in ['contains','strict']:
         print("请检查参数：model参数值应为 ['contains','strict']其一")
         sys.exit(-2)
-    if string_model not in ['contains','strict','start','end','exist']:
-        print("请检查参数：string_model参数值应为 ['contains','strict','start','end','exist']其一")
+    if string_model not in ['contains','strict','start','end','exist','re_expr']:
+        print("请检查参数：string_model参数值应为 ['contains','strict','start','end','exist','re_expr']其一")
         sys.exit(-2)
     if num_model not in ['equal','nequal','big','small']:
         print("请检查参数：num_model参数值应为 ['equal','nequal','big','small']其一")
         sys.exit(-2)
-    if not (type(num_limit)==int or type(num_limit)==float):
+    elif num_model in ['big','small'] and (not (type(num_limit)==int or type(num_limit)==float)):
         print("请检查参数：num_limit应为数字")
         sys.exit(-2)
     if not (type(explicit)==bool):
@@ -33,7 +33,6 @@ def check(src_data, dst_data,model='contains',string_model='strict',num_model='e
         print("比对失败，结果已生成至{}目录".format(csvpath))
     elif explicit==False:
         print("比对失败，未设置结果生成")
-
 
 
 
